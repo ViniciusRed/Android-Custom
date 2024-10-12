@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export GITHUB_USER=""
-export GITHUB_EMAIL=""
+export GITHUB_USER=${GITHUB_USER:-$(git config --get user.name)}
+export GITHUB_EMAIL=${GITHUB_EMAIL:-$(git config --get user.email)}
 
 export device=""
 
